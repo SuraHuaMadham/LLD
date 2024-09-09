@@ -1,0 +1,26 @@
+package Elevator;
+
+import java.util.List;
+
+public class ExternalDispatcher {
+
+    List<ElevatorController> elevatorControllerList = ElevatorCreator.elevatorControllerList;
+
+    public void submitExternalRequest(int floor, Direction direction){
+
+
+        //for simplicity, I am following even odd,
+        for(ElevatorController elevatorController : elevatorControllerList) {
+
+            int elevatorID = elevatorController.elevatorLift.id;
+            if (elevatorID%2==1 && floor%2==1){
+                elevatorController.submitExternalReq(floor,direction);
+            } else if(elevatorID%2==0 && floor%2==0){
+                elevatorController.submitExternalReq(floor,direction);
+
+            }
+        }
+    }
+
+}
+
