@@ -1,4 +1,4 @@
-package Coupon2;
+package Coupon2.Interface;
 
 public interface Cart {
     void addItem(CartItem item);

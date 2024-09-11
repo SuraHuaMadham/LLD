@@ -1,9 +1,13 @@
 package Coupon2;
 
+import Coupon2.Coupon.Coupon;
+import Coupon2.Interface.Cart;
+import Coupon2.Interface.CartItem;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoppingCart implements Cart{
+public class ShoppingCart implements Cart {
     List<CartItem> items;
 
     public ShoppingCart() {

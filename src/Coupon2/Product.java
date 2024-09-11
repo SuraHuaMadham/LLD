@@ -1,15 +1,21 @@
 package Coupon2;
 
+import Coupon2.Coupon.Coupon;
 import Coupon2.Enum.DeductionType;
 import Coupon2.Enum.ProductType;
+import Coupon2.Interface.CartItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Product implements CartItem{
+public class Product implements CartItem {
     @Override
     public boolean isCoupon() {
         return false;
+    }
+
+    public ProductType getProductType() {
+        return productType;
     }
 
     public ProductType productType;

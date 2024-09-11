@@ -1,11 +1,12 @@
-package Coupon2;
+package Coupon2.Coupon;
 
 import Coupon2.Enum.CouponType;
 import Coupon2.Enum.DeductionType;
+import Coupon2.Interface.CartItem;
 
 import java.util.List;
 
-public abstract class Coupon implements CartItem{
+public abstract class Coupon implements CartItem {
     @Override
     public boolean isCoupon() {
         return true;
